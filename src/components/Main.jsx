@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MarkerMap from "./MarkerMap";
-import Cards from './Cards'
+import Cards from './Cards';
+import Search from './Search';
 
 class Main extends Component {
   constructor(props) {
@@ -26,9 +27,11 @@ class Main extends Component {
     }
     return (
       <div>
+        <header><Search></Search></header>
         <button onClick = {this.switchFunction}>Cards </button>
         <button onClick={this.switchFunction} >Map</button>
         <section>{view}</section>
+        <footer>Footer</footer>
       </div>
     );
   }
